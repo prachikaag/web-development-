@@ -3,10 +3,10 @@
 <style>
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 15px;
+  border: 3px solid black;
+  padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: none;
   background: #f1f1f1;
 }
 
@@ -32,7 +32,7 @@ hr {
 
 .navbar {
   overflow: hidden;
-  background-color: #572727;
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -114,7 +114,7 @@ function validatefrm()
 </head>
 
 
-<body style="background-color:#e9eadb;">
+<body style="background-color:white;">
 
 <?php
 require('db.php');
@@ -150,13 +150,13 @@ MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
   <a href="home.php">Home</a>
-  <a href="">News</a>
+  <a href="">About Us</a>
   <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Account
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-    <a href="login.php">Login as client</a>
+    <a href="login.php">Login as employee</a>
     <a href="loginadmin.php">Login as admin</a>
   </div>
   </div> 
@@ -180,16 +180,18 @@ window.onclick = function(e) {
 <br>
 
 <form name="f2" action="loginadmin.php" method="post" style="color:black; float:center; padding-right:20px; padding-left:20px;" >
-<h1  style=" background-color:#e9f04c85;">ADMIN LOG IN</h1>
-    <p>Please fill in this form to login to your account.</p>
-    <hr><br><br>
+<h1  style=" background-color:#3528f685; text-align:center;">ADMIN LOG IN</h1>
+    <p style=" background-color:black;">Please fill in this form to login to your account.</p>
+    <hr><br>
+    <div style=" padding-right: 200px; padding-left: 480px;">
+<div style=" background-color:#3528f685;  border: 3px solid black; padding: 15px; width:500px; ">
+<b>Name:</b> <br><input type="text" name="name" >
+<br>
+<b>Password:<br>
+</b><input type="password" name="pass"><br>
 
-<b>Name:</b> <input type="text" name="name" >
-
-<b>Password:
-</b><input type="password" name="pass">
-
-<input type="submit" name="submit-btn" value="Submit" class="sub" onclick="return validatefrm()">
-</form></body>
+<input type="submit" name="submit-btn" value="SUBMIT" class="sub" onclick="return validatefrm()" style="width: 100%; background-color: black; color:white; "><Br><br><br></div>
+</form>
+</div></body>
 </html>
 

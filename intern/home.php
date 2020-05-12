@@ -3,10 +3,10 @@
 <style>
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 15px;
+  border: 3px solid black;
+  padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: none;
   background: #f1f1f1;
 }
 
@@ -24,7 +24,7 @@ hr {
 
 .navbar {
   overflow: hidden;
-  background-color: #572727;
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -87,20 +87,20 @@ hr {
 </head>
 
 
-<body style="background-color:#e9eadb;">
+<body style="background-color:white;">
 <h1>
 <font color="black"><center>
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
   <a href="home.php">Home</a>
-  <a href="">News</a>
+  <a href="">About Us</a>
   <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Account
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-    <a href="login.php">Login as client</a>
+    <a href="login.php">Login as employee</a>
     <a href="loginadmin.php">Login as admin</a>
   </div>
   </div> 
