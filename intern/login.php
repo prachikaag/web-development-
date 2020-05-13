@@ -149,8 +149,8 @@ $_SESSION['username']=$name;
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
-  <a href="home.php">Home</a>
-  <a href="">About Us</a>
+  <a href="home1.php">Home</a>
+  <a href="aboutus.php">About Us</a>
   <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Account
     <i class="fa fa-caret-down"></i>
@@ -183,8 +183,8 @@ window.onclick = function(e) {
 <h1  style=" background-color:#3528f685; text-align:center;">EMPLOYEE LOG IN</h1>
      <p style=" background-color:black;">Please fill in this form to login to your account.</p>
     <hr><br>
-<div style=" padding-right: 200px; padding-left: 480px;">
-<div style=" background-color:#3528f685;  border: 3px solid black; padding: 15px; width:500px; ">
+<div style=" padding-right: 33%; padding-left: 33%;">
+<div style=" background-color:#3528f685;  border: 3px solid black; padding: 15px; width:100%; ">
 <b>Name:</b> <br><input type="text" name="name" >
 <br>
 <b>Password:<br>
