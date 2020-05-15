@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Bubblegum+Sans|Caveat+Brush|Chewy|Lobster+Two");
+
+.navbar-brand{
+  font-family: "Lobster Two", cursive;
+}
+
+.footer-link{
+  text-decoration: none;
+  color: black;
+}
+
+.footer-link:hover{
+  color: white;
+  text-decoration: none;
+}
