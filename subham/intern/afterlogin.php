@@ -1,24 +1,11 @@
-<!DOCTYPE html>
 <html>
-
-	<link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.css">
-	<link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/style.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="./css/fontawesome-all.css">
-	<link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/navigation.css">
-
+<?php
+$content = 'This is about us page content';
+include('./master.php');
+?>
+<!-- includes navigation panel -->
 
 <body>
-
-<div class="topnav">
-<a class="active" href="/subham/intern/afterlogin.php">Content</a>
-  <a href="/subham/intern/gallery.php">Image</a>
-  <a href="/subham/intern/schematics.php">Schematic Diagram</a>
-  <a href="#formula">Formula</a>
-  <a href="#refrence">Research</a>
-  <a href="#refrence">Refrence</a>
-  <a href="#refrence">Logout</a>
-  
-</div>
 
 
 <div class="newspaper" style="color:black; display:block; font-size:25px; text-align:justify; background-color:#6b7d7285; font-style:oblique;  padding: 25px 25px;">
@@ -28,7 +15,7 @@
   <p2>Control server – this provides the control software for DCS or PLC which is designed to communicate with lower-level control devices.
 <h2>SCADA server or master control unit</h2>
 <p2> SCADA server acts as the master In the SCADA system, remote terminal units and PLC devises which are located at remote field sites act as slaves.
-<h2>Remote terminal unit</h2> 
+<h2>Remote terminal unit</h2>
 <p2>These are designed to support SCADA remote stations, it is a special-purpose data acquisition and control unit. RTU’s are used to support remote situations where wire-based communications are unavailable.
 <h2>Programmable logic controller</h2>
 <p2>PLC is a small industrial computer that is designed to perform the logic functions executed by electrical hardware. PLC has the ability to control complex process and they are used in SCADA systems and DCS. PLC’s can be used as a field device because they are more economical and flexible.
@@ -43,7 +30,7 @@ Requirements of Piping system</p>
 <p>They should be located with sufficient clearance to allow lagging on adjacent pipework that may be required.
 <p>The number of joints should be kept to a minimum consistent with good practice.
 <p>All piping and tubing from supports attached to firm steelworks or structures (not handrails) should be adequately supported along its entire length.
-<h2>Valves:-</h2> 
+<h2>Valves:-</h2>
 <p2>A valve is a device or natural object that regulates, directs or controls the flow of a fluid by opening, closing, or partially obstructing various passageways. Valves are technically fittings, but are usually discussed as a separate category.
 <p>Types of valves used in petrochemical industry
 <p>1.Start/stop the flow of the fluid (hydrocarbons, oil & gas, steam, water, acids) through the pipeline (example: gate valve, ball valve, butterfly valve, knife gate valve, or plug valve)

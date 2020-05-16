@@ -1,30 +1,10 @@
-<!DOCTYPE html>
-<html>
+<?php
+   $content = 'This is about us page content';
+   include('./master.php');
+ ?>
+  <!-- includes navigation panel -->
 
-	<link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.css">
-	<link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/style.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="./css/fontawesome-all.css">
-	<link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/navigation.css">
-
-<head>
-  
-</head>
 <body>
-
-<div class="topnav">
-  <a class="active" href="/subham/intern/afterlogin.php">Content</a>
-  <a href="/subham/intern/gallery.php">Image</a>
-  <a href="/subham/intern/schematics.php">Schematic Diagram</a>
-  <a href="#formula">Formula</a>
-  <a href="#refrence">Research</a>
-  <a href="#refrence">Refrence</a>
-  <a href="#refrence">Logout</a>
-  
-</div>
-
-
-
-
 <!-- gallery -->
 <div class="gallery py-5">
 		<div class="container py-xl-5 py-lg-3">
@@ -132,7 +112,7 @@
 	<!-- //gallery -->
 
 
-	
+
     <!-- gallery page js start here -->
         <!-- Gallery-js -->
 	<script src="./bootstrap-4.3.1-dist/js/modernizr.custom.97074.js"></script>

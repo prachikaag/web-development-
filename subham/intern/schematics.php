@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/style.css">
-    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/costum.css">
-    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/navigation.css">
-<head>
 
+<?php
+   $content = 'This is about us page content';
+   include('./master.php');
+ ?>
+  <!-- includes navigation panel -->
 
-
-
-</head>
 <body>
-
-<div class="topnav">
-  <a class="active" href="/subham/intern/afterlogin.php">Content</a>
-  <a href="/subham/intern/gallery.php">Image</a>
-  <a href="/subham/intern/schematics.php">Schematic Diagram</a>
-  <a href="#formula">Formula</a>
-  <a href="#refrence">Research</a>
-  <a href="#refrence">Refrence</a>
-  <a href="#refrence">Logout</a>
-  
-</div>
-
-
-
-
-
 <main>
           <div class="container pt-3">
               <div class="row">
