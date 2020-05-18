@@ -161,8 +161,14 @@ MANAGEMENT SYSTEM</center>
     <a href="">Pressure Control</a>
   </div>
   </div> 
-   <a href="home1.php">Logout</a>
+  <a onclick="Logout()">Logout </a>
 </div>
+<script>
+    function Logout(){
+        alert("You are logged out");
+        window.location.href='home1.php';
+    }
+    </script>
 
 <script>
 
