@@ -149,10 +149,10 @@ input[type=text]:focus, input[type=password]:focus {
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
-  <a href="home1.php">Home</a>
-  <a href="aboutus.php">About Us</a>
+  <a href="home.php">Home</a>
+  <a href="about.php">About Us</a>
   <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()" >Account
+  <button class="dropbtn" onclick="myFunction()">Account
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
@@ -179,7 +179,7 @@ window.onclick = function(e) {
 </script>
 <br>
 <div class="bg-img">
-  <form name="f2" action="home1.php" method="post" class="container">
+  <form name="f2" action="home.php" method="post" class="container">
     <h1>EMPLOYEE LOGIN</h1>
 
     <label for="email"><b>Name</b></label>
@@ -210,12 +210,11 @@ $_SESSION['username']=$name;
         	{
         	//$_SESSION['name']=$name;
 
-					 echo "welcome ". $name;	
-					 header("Location: home.php"); 
+					 echo "welcome ". $name;	 
          }
          else
          {
-         	echo "
+         	echo "<div class='form'>
 			<h3>Username/password is incorrect.</h3>";
   }
  }
@@ -228,5 +227,5 @@ $_SESSION['username']=$name;
 <p style="color:black; font-size:25px; text-align:center; background-color:#81e0d185; padding: 10px 30px;"><br><br>
 <b><u>ENVIRONMENT FRONT</u></b><br><br>"On the environment front, all xx refineries fully comply with the statutory requirements. Several Clean Development Mechanism projects have also been initiated. To address concerns on safety at the work place, a number of steps were taken during the year, resulting in reduction of the frequency of accidents.<br>Innovative strategies and knowledge-sharing are the tools available for converting challenges into opportunities for sustained organisational growth. With strategies and plans for several value-added projects in place, xx refineries will continue to play a leading role in the downstream hydrocarbon sector for meeting the rising energy needs of our country."
 <br><br><br></p>
-<p style="color:black; font-size:30px; text-align:center; background-color:#e6660085; font-style:oblique;"><br><u>
+<p style="color:black; font-size:30px; text-align:center; background-color:#e6660085; font-style:oblique;"><br><br><u>
 TO GET MORE INFORMATION YOU CAN CONTACT US ON emailaddr</u><br><br></p></body></html>
