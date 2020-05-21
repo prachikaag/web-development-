@@ -149,18 +149,27 @@ input[type=text]:focus, input[type=password]:focus {
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
-  <a href="home1.php">Home</a>
-  <a href="aboutus.php">About Us</a>
+  <a href="home2.php">Home</a>
+  <a href="about1.php">About Us</a>
   <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()" >Account
+  <button class="dropbtn" onclick="myFunction()">Controls
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-    <a href="login.php">Login as employee</a>
-    <a href="loginadmin.php">Login as admin</a>
+  <a href="ref1.php">System Workflow</a>
+    <a href="temp1.html">Temperature Control</a>
+    <a href="pressure1.html">Pressure Control</a>
+      <a href="flow1.html">Flow Control</a>
   </div>
   </div> 
+  <a onclick="Logout()">Logout </a>
 </div>
+<script>
+    function Logout(){
+        alert("You are logged out");
+        window.location.href='home1.php';
+    }
+    </script>
 
 <script>
 
@@ -179,47 +188,7 @@ window.onclick = function(e) {
 </script>
 <br>
 <div class="bg-img">
-  <form name="f2" action="home1.php" method="post" class="container">
-    <h1>EMPLOYEE LOGIN</h1>
-
-    <label for="email"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="pass" required>
-
-    <button type="submit" name="submit-btn" class="btn" onclick="return validatefrm()">Login</button>
-  </form><br><br>
-  <?php
-require('db.php');
-session_start();
-// If form submitted, insert values into the database.
-if (isset($_POST['submit-btn']))
-{
-        // removes backslashes
-  $name =$_POST['name'];
-        //escapes special characters in a string
-$_SESSION['username']=$name;
-  
-  $password = $_POST['pass'];
-  //Checking is user existing in the database or not
-        $query = "SELECT * FROM user WHERE username='$name' and password='$password' "; 
- $result = mysqli_query($con,$query) or die(mysqli_error());
- $rows = mysqli_num_rows($result);
-        if($rows==1)
-        	{
-        	//$_SESSION['name']=$name;
-
-					 echo "welcome ". $name;	
-					 header("Location: home2.php"); 
-         }
-         else
-         {
-         	echo "
-			<h3>Username/password is incorrect.</h3>";
-  }
- }
-?>
+ 
 </div>
 
 <p style="color:black; display:block; font-size:25px; text-align:center; background-color:#e9f04c85; font-style:oblique; top-margin:0px;  padding: 14px 16px;">"Born from the vision of achieving self-reliance in oil refining and marketing for the nation, XX has gathered a legacy of more than 25 years of accumulated experiences in all areas of petroleum refining. The strength of XX springs from its experience of operating the largest number of refineries in India and adapting to a variety of refining processes along the way."</p>

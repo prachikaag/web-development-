@@ -193,17 +193,17 @@ img {vertical-align: middle;}
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
-  <a href="home.php">Home</a>
-  <a href="about.php">About Us</a>
+  <a href="home2.php">Home</a>
+  <a href="about1.php">About Us</a>
   <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Controls
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-  <a href="ref.php">System Workflow</a>
-    <a href="temp.html">Temperature Control</a>
-    <a href="pressure.html">Pressure Control</a>
-      <a href="flow.html">Flow Control</a>
+  <a href="ref1.php">System Workflow</a>
+    <a href="temp1.html">Temperature Control</a>
+    <a href="pressure1.html">Pressure Control</a>
+      <a href="flow1.html">Flow Control</a>
   </div>
   </div> 
     <a onclick="Logout()">Logout </a>

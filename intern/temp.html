@@ -139,9 +139,61 @@ input[type=text]:focus, input[type=password]:focus {
 .btn:hover {
   opacity: 1;
 }
+.img11{
+	width: 100vw;
+	height: 95vh;
+	overflow: hidden;
+	background-image: url("refining.jpg");
+	background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
 </style>
 
 <link rel="stylesheet" href="css.css">
+	<title>Analog Clock</title>
+	<meta charset="utf-8">
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['temperature', 80],
+          ['pressure', 55],
+          ['flow', 68]
+        ]);
+
+        var options = {
+          width: 400, height: 400,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+        setInterval(function() {
+          data.setValue(0, 1, 40 + Math.round(50 * Math.random()));
+          chart.draw(data, options);
+        }, 13000);
+        setInterval(function() {
+          data.setValue(1, 1, 40 + Math.round(50 * Math.random()));
+          chart.draw(data, options);
+        }, 5000);
+        setInterval(function() {
+          data.setValue(2, 1, 60 + Math.round(40 * Math.random()));
+          chart.draw(data, options);
+        }, 26000);
+      }
+    </script>
+
 </head>
 <body style="background-color:white;">
 <h1>
@@ -149,18 +201,27 @@ input[type=text]:focus, input[type=password]:focus {
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
-  <a href="home1.php">Home</a>
-  <a href="aboutus.php">About Us</a>
+  <a href="home.php">Home</a>
+  <a href="about.php">About Us</a>
   <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()" >Account
+  <button class="dropbtn" onclick="myFunction()">Controls
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-    <a href="login.php">Login as employee</a>
-    <a href="loginadmin.php">Login as admin</a>
+  <a href="ref.php">System Workflow</a>
+    <a href="temp.html">Temperature Control</a>
+    <a href="pressure.html">Pressure Control</a>
+      <a href="flow.html">Flow Control</a>
   </div>
   </div> 
+  <a onclick="Logout()">Logout </a>
 </div>
+<script>
+    function Logout(){
+        alert("You are logged out");
+        window.location.href='home1.php';
+    }
+    </script>
 
 <script>
 
@@ -176,57 +237,26 @@ window.onclick = function(e) {
     }
   }
 }
-</script>
+</script><div class="img11">
 <br>
-<div class="bg-img">
-  <form name="f2" action="home1.php" method="post" class="container">
-    <h1>EMPLOYEE LOGIN</h1>
+	<center> <font size = 50 color=white> Temperature values </font> 
+<br> <br>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+ <font color=white> Enter number input between 20-70  </font> <br> <br>
+ <font color="yellow" size=4 face=Arial>
+<input type="number" id="a" value="0"> &nbsp °
 
-    <label for="email"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" required>
++ &nbsp <input type="number" id="b" value="20"> ° &nbsp ^5/34 °
+</font>
+= <output><input type ="range" name="x" for="a b">  </output>
+</form>
+<br> <br>
+<h3> <font color=white> Caution : The change can be dangerous for the Flow Controller, follow the refinery policy. </font> </h3> </center>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="pass" required>
-
-    <button type="submit" name="submit-btn" class="btn" onclick="return validatefrm()">Login</button>
-  </form><br><br>
-  <?php
-require('db.php');
-session_start();
-// If form submitted, insert values into the database.
-if (isset($_POST['submit-btn']))
-{
-        // removes backslashes
-  $name =$_POST['name'];
-        //escapes special characters in a string
-$_SESSION['username']=$name;
-  
-  $password = $_POST['pass'];
-  //Checking is user existing in the database or not
-        $query = "SELECT * FROM user WHERE username='$name' and password='$password' "; 
- $result = mysqli_query($con,$query) or die(mysqli_error());
- $rows = mysqli_num_rows($result);
-        if($rows==1)
-        	{
-        	//$_SESSION['name']=$name;
-
-					 echo "welcome ". $name;	
-					 header("Location: home2.php"); 
-         }
-         else
-         {
-         	echo "
-			<h3>Username/password is incorrect.</h3>";
-  }
- }
-?>
-</div>
-
-<p style="color:black; display:block; font-size:25px; text-align:center; background-color:#e9f04c85; font-style:oblique; top-margin:0px;  padding: 14px 16px;">"Born from the vision of achieving self-reliance in oil refining and marketing for the nation, XX has gathered a legacy of more than 25 years of accumulated experiences in all areas of petroleum refining. The strength of XX springs from its experience of operating the largest number of refineries in India and adapting to a variety of refining processes along the way."</p>
-
-<center>
-<p style="color:black; font-size:25px; text-align:center; background-color:#81e0d185; padding: 10px 30px;"><br><br>
-<b><u>ENVIRONMENT FRONT</u></b><br><br>"On the environment front, all xx refineries fully comply with the statutory requirements. Several Clean Development Mechanism projects have also been initiated. To address concerns on safety at the work place, a number of steps were taken during the year, resulting in reduction of the frequency of accidents.<br>Innovative strategies and knowledge-sharing are the tools available for converting challenges into opportunities for sustained organisational growth. With strategies and plans for several value-added projects in place, xx refineries will continue to play a leading role in the downstream hydrocarbon sector for meeting the rising energy needs of our country."
-<br><br><br></p>
-<p style="color:black; font-size:30px; text-align:center; background-color:#e6660085; font-style:oblique;"><br><u>
-TO GET MORE INFORMATION YOU CAN CONTACT US ON emailaddr</u><br><br></p></body></html>
+<!-- <p><strong>Note:</strong> The output element is not supported in Edge 12 (or earlier).</p> -->
+<center> <br> <div id="chart_div" style="width: 900px; height: 900px;"> </div> </center>
+<br> <br>
+	
+	<script type="text/javascript" src="app.js"></script></div>
+</body>
+</html>

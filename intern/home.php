@@ -157,8 +157,9 @@ MANAGEMENT SYSTEM</center>
   </button>
   <div class="dropdown-content" id="myDropdown">
   <a href="ref.php">System Workflow</a>
-    <a href="">Temperature Control</a>
-    <a href="">Pressure Control</a>
+    <a href="temp.html">Temperature Control</a>
+    <a href="pressure.html">Pressure Control</a>
+      <a href="flow.html">Flow Control</a>
   </div>
   </div> 
   <a onclick="Logout()">Logout </a>
