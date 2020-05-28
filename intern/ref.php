@@ -192,6 +192,7 @@ MANAGEMENT SYSTEM</center>
     <a href="temp.html">Temperature Control</a>
     <a href="pressure.html">Pressure Control</a>
       <a href="flow.html">Flow Control</a>
+      <a href="diag.php">Diagnostics</a>
   </div>
   </div> 
    <a onclick="Logout()">Logout </a>

@@ -97,11 +97,11 @@ hr {
   width: 60px;
   height: 34px;
 }
-.right {
-  position: absolute;
-  right: 10%;
-  width: 400px;
- 
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
@@ -112,7 +112,8 @@ hr {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .slider:before {
@@ -131,7 +132,9 @@ input:checked + .slider {
   background-color: #2196F3;
 }
 
-
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
@@ -139,6 +142,14 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 </style>
 
 <script>
@@ -170,18 +181,18 @@ function validatefrm()
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
-  <a href="home2.php">Home</a>
-  <a href="about1.php">About Us</a>
+  <a href="home.php">Home</a>
+  <a href="about.php">About Us</a>
   <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Controls
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-  <a href="ref1.php">System Workflow</a>
-    <a href="temp1.html">Temperature Control</a>
-    <a href="pressure1.html">Pressure Control</a>
-      <a href="flow1.html">Flow Control</a>
-      <a href="diag1.php">Diagnostics</a>
+  <a href="ref.php">System Workflow</a>
+    <a href="temp.html">Temperature Control</a>
+    <a href="pressure.html">Pressure Control</a>
+      <a href="flow.html">Flow Control</a>
+      <a href="diag.php">Diagnostics</a>
   </div>
   </div> 
    <a onclick="Logout()">Logout </a>
@@ -208,9 +219,3 @@ window.onclick = function(e) {
 }
 </script>
 <br>
-
-<img src="capture.png"> <div class="right">
-<img src="controller.png">
-</div>
-</body>
-</html>

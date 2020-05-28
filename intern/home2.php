@@ -160,6 +160,7 @@ MANAGEMENT SYSTEM</center>
     <a href="temp1.html">Temperature Control</a>
     <a href="pressure1.html">Pressure Control</a>
       <a href="flow1.html">Flow Control</a>
+      <a href="diag1.php">Diagnostics</a>
   </div>
   </div> 
   <a onclick="Logout()">Logout </a>

@@ -139,21 +139,25 @@ input[type=text]:focus, input[type=password]:focus {
 .btn:hover {
   opacity: 1;
 }
+
 .img11{
 	width: 100vw;
 	height: 95vh;
 	overflow: hidden;
-	background-image: url("refining.jpg");
+	background-image: url("energy-oil-refinery.jpg");
 	background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
+
+
 </style>
 
 <link rel="stylesheet" href="css.css">
-	<title>Analog Clock</title>
+	<title>Diagnostics</title>
 	<meta charset="utf-8">
-	
+
+
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    <script type="text/javascript">
       google.charts.load('current', {'packages':['gauge']});
@@ -193,7 +197,6 @@ input[type=text]:focus, input[type=password]:focus {
         }, 26000);
       }
     </script>
-
 </head>
 <body style="background-color:white;">
 <h1>
@@ -201,18 +204,18 @@ input[type=text]:focus, input[type=password]:focus {
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
-  <a href="home.php">Home</a>
-  <a href="about.php">About Us</a>
+  <a href="home2.php">Home</a>
+  <a href="about1.php">About Us</a>
   <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Controls
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-  <a href="ref.php">System Workflow</a>
-    <a href="temp.html">Temperature Control</a>
-    <a href="pressure.html">Pressure Control</a>
-      <a href="flow.html">Flow Control</a>
-      <a href="diag.php">Diagnostics</a>
+  <a href="ref1.php">System Workflow</a>
+    <a href="temp1.html">Temperature Control</a>
+    <a href="pressure1.html">Pressure Control</a>
+      <a href="flow1.html">Flow Control</a>
+       <a href="diag1.php">Diagnostics</a>
   </div>
   </div> 
   <a onclick="Logout()">Logout </a>
@@ -238,26 +241,12 @@ window.onclick = function(e) {
     }
   }
 }
-</script><div class="img11">
-<br>
-	<center> <font size = 50 color=white> Temperature values </font> 
-<br> <br>
-<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
- <font color=white> Enter number input between 20-70  </font> <br> <br>
- <font color="yellow" size=4 face=Arial>
-<input type="number" id="a" value="0"> &nbsp °
+</script>
+<p style=" background-color:black;  text-align:center; height:30px;"> EMPLOYEE DIAGNOSTICS </p>
+<h2  style=" background-color:#3528f685; text-align:center;">Protocol Used: MODBUS</h2>
+<p style=" background-color:black;">Please follow the instructions given in the mannual.</p>
+<h3  style=" background-color:#3528f685; ">IP Address: <br>
+Port Used: </h3>
 
-+ &nbsp <input type="number" id="b" value="20"> ° &nbsp ^5/34 °
-</font>
-= <output><input type ="range" name="x" for="a b">  </output>
-</form>
-<br> <br>
-<h3> <font color=white> Caution : The change can be dangerous for the Flow Controller, follow the refinery policy. </font> </h3> </center>
-
-<!-- <p><strong>Note:</strong> The output element is not supported in Edge 12 (or earlier).</p> -->
-<center> <br> <div id="chart_div" style="width: 900px; height: 900px;"> </div> </center>
-<br> <br>
-	
-	<script type="text/javascript" src="app.js"></script></div>
 </body>
 </html>

@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 input[type=text], input[type=password] {
   width: 100%;
@@ -91,54 +89,6 @@ hr {
 }
 
 .show {display:block;}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-.right {
-  position: absolute;
-  right: 10%;
-  width: 400px;
- 
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
 </style>
 
 <script>
@@ -165,23 +115,49 @@ function validatefrm()
 
 
 <body style="background-color:white;">
-<h1>
+
+<?php
+require('db.php');
+session_start();
+// If form submitted, insert values into the database.
+if (isset($_POST['submit-btn']))
+{
+ 
+
+  $password = $_POST['pass'];
+  //Checking is user existing in the database or not
+        $query = "SELECT * FROM admin WHERE password='$password' "; 
+ $result = mysqli_query($con,$query) or die(mysqli_error());
+ $rows = mysqli_num_rows($result);
+        if($rows>=1)
+        	{
+        	//$_SESSION['name']=$name;
+ 
+           header("Location: red.php"); 
+         }
+         else
+         {
+         	echo "<div class='form'>
+			<h3>Password is incorrect.</h3>";
+  }
+ }
+?><h1>
 <font color="black"><center>
 MANAGEMENT SYSTEM</center>
 </font></h1>
 <div class="navbar">
-  <a href="home2.php">Home</a>
-  <a href="about1.php">About Us</a>
+  <a href="home.php">Home</a>
+  <a href="about.php">About Us</a>
   <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Controls
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-  <a href="ref1.php">System Workflow</a>
-    <a href="temp1.html">Temperature Control</a>
-    <a href="pressure1.html">Pressure Control</a>
-      <a href="flow1.html">Flow Control</a>
-      <a href="diag1.php">Diagnostics</a>
+  <a href="ref.php">System Workflow</a>
+    <a href="temp.html">Temperature Control</a>
+    <a href="pressure.html">Pressure Control</a>
+      <a href="flow.html">Flow Control</a>
+      <a href="diag.php">Diagnostics</a>
   </div>
   </div> 
    <a onclick="Logout()">Logout </a>
@@ -209,8 +185,18 @@ window.onclick = function(e) {
 </script>
 <br>
 
-<img src="capture.png"> <div class="right">
-<img src="controller.png">
-</div>
-</body>
+<form name="f2" action="diag.php" method="post" style="color:black; float:center; padding-right:20px; padding-left:20px;" >
+<h1  style=" background-color:#3528f685; text-align:center;">ADMIN DIAGNOSTICS</h1>
+    <p style=" background-color:black;">Please fill in the password to login to diagnostics.</p>
+    <hr><br>
+    <div style=" padding-right: 33%; padding-left: 33%;">
+<div style=" background-color:#3528f685;  border: 3px solid black; padding: 15px; width:100%; ">
+
+<b>Password:<br>
+</b><input type="password" name="pass"><br>
+
+<input type="submit" name="submit-btn" value="SUBMIT" class="sub" onclick="return validatefrm()" style="width: 100%; background-color: black; color:white; "><Br><br><br></div>
+</form>
+</div></body>
 </html>
+
